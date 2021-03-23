@@ -31,7 +31,6 @@ dependencies:
   geolocator:
   http:
   flutter_spinkit:
-  timer_builder:
 
 
 dev_dependencies:

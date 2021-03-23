@@ -13,9 +13,11 @@
     <list default="true" id="c9dfd102-970f-4774-8749-2e50e4fb30cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +44,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BMI_Calculator" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Dart" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -92,34 +94,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="210" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616357728016" />
-    <state x="279" y="264" key="FileChooserDialogImpl" timestamp="1616353846128">
+    <state x="279" y="264" key="FileChooserDialogImpl" timestamp="1616483379833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="279" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616353846128" />
-    <state width="1124" height="305" key="GridCell.Tab.0.bottom" timestamp="1616482899465">
+    <state x="279" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616483379833" />
+    <state width="827" height="305" key="GridCell.Tab.0.bottom" timestamp="1616483176526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1124" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616482899465" />
-    <state width="1124" height="305" key="GridCell.Tab.0.center" timestamp="1616482899465">
+    <state width="827" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616483176526" />
+    <state width="827" height="305" key="GridCell.Tab.0.center" timestamp="1616483176526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1124" height="305" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616482899465" />
-    <state width="1124" height="305" key="GridCell.Tab.0.left" timestamp="1616482899465">
+    <state width="827" height="305" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616483176526" />
+    <state width="827" height="305" key="GridCell.Tab.0.left" timestamp="1616483176526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1124" height="305" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616482899465" />
-    <state width="1124" height="305" key="GridCell.Tab.0.right" timestamp="1616482899465">
+    <state width="827" height="305" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616483176526" />
+    <state width="827" height="305" key="GridCell.Tab.0.right" timestamp="1616483176526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1124" height="305" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616482899465" />
+    <state width="827" height="305" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616483176526" />
     <state x="0" y="168" key="SettingsEditor" timestamp="1616353873885">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="168" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1616353873885" />
-    <state x="932" y="60" width="948" height="918" key="find.popup" timestamp="1616481880375">
+    <state x="932" y="60" width="948" height="918" key="find.popup" timestamp="1616483036126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="932" y="60" width="948" height="918" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616481880375" />
+    <state x="932" y="60" width="948" height="918" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616483036126" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
