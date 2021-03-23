@@ -107,19 +107,17 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Expanded(
-                  child: Row(
-                    children: [
-                      Text(
-                        '$temperature°',
-                        style: kTempTextStyle,
-                      ),
-                      Text(
-                        weatherIcon,
-                        style: kConditionTextStyle,
-                      ),
-                    ],
-                  ),
+                child: Row(
+                  children: [
+                    Text(
+                      '$temperature°',
+                      style: kTempTextStyle,
+                    ),
+                    Text(
+                      weatherIcon,
+                      style: kConditionTextStyle,
+                    ),
+                  ],
                 ),
               ),
               SizedBox(

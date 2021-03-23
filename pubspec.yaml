@@ -32,7 +32,9 @@ dependencies:
   http:
   flutter_spinkit:
 
+
 dev_dependencies:
+  flutter_config:
   flutter_test:
     sdk: flutter
 
@@ -44,6 +46,7 @@ flutter:
   uses-material-design: true
   assets:
     - images/
+    - .env
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

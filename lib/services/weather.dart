@@ -1,6 +1,8 @@
 import 'package:HowsTheWeather/services/networking.dart';
 import 'package:HowsTheWeather/services/location.dart';
-import '../key.dart';
+import 'package:flutter_config/flutter_config.dart';
+
+var apiKey = FlutterConfig.get('APIKEY');
 
 const openWeatherMapURL = 'https://api.openweathermap.org/data/2.5/weather';
 
@@ -10,6 +12,7 @@ class WeatherModel {
     NetworkHelper networkHelper = NetworkHelper(url);
 
     var weatherData = await networkHelper.getData();
+    print("api key: ${FlutterConfig.get('APIKEY')}");
     return weatherData;
   }
 
