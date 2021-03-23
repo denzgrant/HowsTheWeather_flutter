@@ -1,3 +1,4 @@
+import 'file:///C:/Users/denzg/Documents/MyCode/Flutter/HowsTheWeather_flutter/lib/components/time.dart';
 import 'package:flutter/material.dart';
 import 'package:HowsTheWeather/utilities/constants.dart';
 import 'package:HowsTheWeather/services/weather.dart';
@@ -37,7 +38,7 @@ class _LocationScreenState extends State<LocationScreen> {
         cityName = '';
         return;
       }
-      double temp = weatherData['main']['temp'];
+      dynamic temp = weatherData['main']['temp'];
       temperature = temp.toInt();
       weatherDescrip = weatherData['weather'][0]['description'];
       var condition = weatherData['weather'][0]['id'];
@@ -76,7 +77,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     },
                     child: Icon(
                       Icons.near_me,
-                      size: 50.0,
+                      size: 30.0,
                     ),
                   ),
                   FlatButton(
@@ -97,7 +98,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     },
                     child: Icon(
                       Icons.location_city,
-                      size: 50.0,
+                      size: 30.0,
                     ),
                   ),
                 ],
@@ -111,12 +112,21 @@ class _LocationScreenState extends State<LocationScreen> {
                   children: [
                     Text(
                       '$temperature°',
-                      style: kTempTextStyle,
+                      style: kTempIconStyle,
                     ),
                     Text(
                       weatherIcon,
                       style: kConditionTextStyle,
                     ),
+                    // SizedBox(
+                    //   width: 0,
+                    // ),
+                    // Text(
+                    //   "It's $now",
+                    //   style: TextStyle(
+                    //     fontSize: 10,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
@@ -135,16 +145,17 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 75,
               ),
               Padding(
                 padding: EdgeInsets.only(right: 15.0),
                 child: Text(
                   "$weatherMessage in $cityName, $country!",
-                  textAlign: TextAlign.right,
+                  textAlign: TextAlign.center,
                   style: kMessageTextStyle,
                 ),
               ),
+              CurrentTime(),
             ],
           ),
         ),

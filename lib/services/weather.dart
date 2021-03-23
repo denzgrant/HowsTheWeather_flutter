@@ -12,7 +12,6 @@ class WeatherModel {
     NetworkHelper networkHelper = NetworkHelper(url);
 
     var weatherData = await networkHelper.getData();
-    print("api key: ${FlutterConfig.get('APIKEY')}");
     return weatherData;
   }
 
