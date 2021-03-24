@@ -10,11 +10,26 @@ const kTempIconStyle = TextStyle(
   fontSize: 75.0,
   color: Colors.white,
   fontWeight: FontWeight.w900,
+  shadows: <Shadow>[
+    Shadow(
+      offset: Offset(10.0, 10.0),
+      blurRadius: 7.0,
+      color: Color.fromARGB(255, 0, 0, 0),
+    ),
+  ],
 );
 
 const kMessageTextStyle = TextStyle(
-  fontFamily: 'RaleWay',
-  fontSize: 35.0,
+  fontFamily: 'AmaticSC',
+  fontSize: 50.0,
+  fontWeight: FontWeight.w900,
+  shadows: <Shadow>[
+    Shadow(
+      offset: Offset(10.0, 10.0),
+      blurRadius: 7.0,
+      color: Color.fromARGB(255, 0, 0, 0),
+    ),
+  ],
 );
 
 const kButtonTextStyle = TextStyle(

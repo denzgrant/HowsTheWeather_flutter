@@ -1,4 +1,4 @@
-import 'file:///C:/Users/denzg/Documents/MyCode/Flutter/HowsTheWeather_flutter/lib/components/time.dart';
+import 'package:HowsTheWeather/components/time.dart';
 import 'package:flutter/material.dart';
 import 'package:HowsTheWeather/utilities/constants.dart';
 import 'package:HowsTheWeather/services/weather.dart';
@@ -77,8 +77,12 @@ class _LocationScreenState extends State<LocationScreen> {
                     },
                     child: Icon(
                       Icons.near_me,
-                      size: 30.0,
+                      size: 40.0,
                     ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: CurrentDate(),
                   ),
                   FlatButton(
                     onPressed: () async {
@@ -98,7 +102,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     },
                     child: Icon(
                       Icons.location_city,
-                      size: 30.0,
+                      size: 40.0,
                     ),
                   ),
                 ],
@@ -118,20 +122,12 @@ class _LocationScreenState extends State<LocationScreen> {
                       weatherIcon,
                       style: kConditionTextStyle,
                     ),
-                    // SizedBox(
-                    //   width: 0,
-                    // ),
-                    // Text(
-                    //   "It's $now",
-                    //   style: TextStyle(
-                    //     fontSize: 10,
-                    //   ),
-                    // ),
+                    SizedBox(
+                      width: 35,
+                    ),
+                    ClockWidget(),
                   ],
                 ),
-              ),
-              SizedBox(
-                height: 20,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15.0),
@@ -139,7 +135,7 @@ class _LocationScreenState extends State<LocationScreen> {
                   children: [
                     Text(
                       "$weatherDescrip",
-                      style: kTempTextStyle,
+                      style: kMessageTextStyle,
                     ),
                   ],
                 ),
@@ -155,7 +151,6 @@ class _LocationScreenState extends State<LocationScreen> {
                   style: kMessageTextStyle,
                 ),
               ),
-              CurrentTime(),
             ],
           ),
         ),
