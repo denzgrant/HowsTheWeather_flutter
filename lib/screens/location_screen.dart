@@ -16,6 +16,9 @@ class _LocationScreenState extends State<LocationScreen> {
   WeatherModel weather = WeatherModel();
 
   int temperature;
+  int feelsLikeTemp;
+  int tempMin;
+  int tempMax;
   String weatherIcon;
   String cityName;
   String weatherDescrip;
@@ -33,13 +36,28 @@ class _LocationScreenState extends State<LocationScreen> {
     setState(() {
       if (weatherData == null) {
         temperature = 0;
+        feelsLikeTemp = 0;
+        tempMin = 0;
+        tempMax = 0;
         weatherIcon = "Error";
+        weatherDescrip = ":/";
         weatherMessage = "Unable to get weather data, check location settings";
         cityName = '';
+        country = '';
         return;
       }
       dynamic temp = weatherData['main']['temp'];
       temperature = temp.toInt();
+
+      dynamic feelTemp = weatherData['main']['feels_like'];
+      feelsLikeTemp = feelTemp.toInt();
+
+      dynamic minTemp = weatherData['main']['temp_min'];
+      tempMin = minTemp.toInt();
+
+      dynamic maxTemp = weatherData['main']['temp_max'];
+      tempMax = maxTemp.toInt();
+
       weatherDescrip = weatherData['weather'][0]['description'];
       var condition = weatherData['weather'][0]['id'];
       weatherIcon = weather.getWeatherIcon(condition);
@@ -65,7 +83,6 @@ class _LocationScreenState extends State<LocationScreen> {
         constraints: BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -129,8 +146,74 @@ class _LocationScreenState extends State<LocationScreen> {
                   ],
                 ),
               ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 13.0),
+                    child: SizedBox(
+                        height: 30,
+                        child: Text.rich(
+                          TextSpan(
+                            text: 'Feels like ',
+                            style: kOtherTemps, // default text style
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: '$feelsLikeTemp°',
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.w900)),
+                            ],
+                          ),
+                        )),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 13.0),
+                    child: SizedBox(
+                        height: 30,
+                        child: Text.rich(
+                          TextSpan(
+                            text: 'Min: ',
+                            style: kOtherTemps, // default text style
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: '$tempMin°',
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                        )),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 13.0),
+                    child: SizedBox(
+                        height: 30,
+                        child: Text.rich(
+                          TextSpan(
+                            text: 'Max: ',
+                            style: kOtherTemps, // default text style
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: '$tempMax°',
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                        )),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
               Padding(
-                padding: const EdgeInsets.only(left: 15.0),
+                padding: const EdgeInsets.only(left: 35.0),
                 child: Row(
                   children: [
                     Text(
@@ -141,15 +224,12 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               SizedBox(
-                height: 75,
+                height: 25,
               ),
-              Padding(
-                padding: EdgeInsets.only(right: 15.0),
-                child: Text(
-                  "$weatherMessage in $cityName, $country!",
-                  textAlign: TextAlign.center,
-                  style: kMessageTextStyle,
-                ),
+              Text(
+                "$weatherMessage in $cityName, $country!",
+                textAlign: TextAlign.center,
+                style: kMessageTextStyle,
               ),
             ],
           ),

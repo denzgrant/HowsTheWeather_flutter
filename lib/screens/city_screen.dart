@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:HowsTheWeather/utilities/constants.dart';
+import 'package:flutter/services.dart';
 
 class CityScreen extends StatefulWidget {
   @override
@@ -34,9 +35,12 @@ class _CityScreenState extends State<CityScreen> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 230,
+              ),
               Container(
                 padding: EdgeInsets.all(20.0),
-                child: TextField(
+                child: TextFormField(
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 15.0,
@@ -45,6 +49,9 @@ class _CityScreenState extends State<CityScreen> {
                   onChanged: (value) {
                     cityName = value;
                   },
+                  inputFormatters: [
+                    FilteringTextInputFormatter.allow(RegExp('[a-z A-Z]'))
+                  ],
                 ),
               ),
               FlatButton(

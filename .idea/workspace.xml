@@ -11,15 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9dfd102-970f-4774-8749-2e50e4fb30cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fonts/AmaticSC-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/AmaticSC-Regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/time.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/time.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/city_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/city_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/location_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/location_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/utilities/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utilities/constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +40,8 @@
   <component name="PropertiesComponent">
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="dart.analysis.tool.window.force.activate" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BMI_Calculator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Dart" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -102,40 +96,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="279" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616483379833" />
-    <state width="914" height="243" key="GridCell.Tab.0.bottom" timestamp="1616561452987">
+    <state width="1134" height="326" key="GridCell.Tab.0.bottom" timestamp="1616704997306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="243" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616561452987" />
-    <state width="914" height="243" key="GridCell.Tab.0.center" timestamp="1616561452987">
+    <state width="1134" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616704997306" />
+    <state width="1134" height="326" key="GridCell.Tab.0.center" timestamp="1616704997306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="243" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616561452987" />
-    <state width="914" height="243" key="GridCell.Tab.0.left" timestamp="1616561452987">
+    <state width="1134" height="326" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616704997306" />
+    <state width="1134" height="326" key="GridCell.Tab.0.left" timestamp="1616704997306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="243" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616561452987" />
-    <state width="914" height="243" key="GridCell.Tab.0.right" timestamp="1616561452987">
+    <state width="1134" height="326" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616704997306" />
+    <state width="1134" height="326" key="GridCell.Tab.0.right" timestamp="1616704997306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="243" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616561452987" />
+    <state width="1134" height="326" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616704997306" />
     <state x="0" y="168" key="SettingsEditor" timestamp="1616353873885">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="168" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1616353873885" />
-    <state x="932" y="60" width="948" height="918" key="find.popup" timestamp="1616554013846">
+    <state x="932" y="60" width="948" height="918" key="find.popup" timestamp="1616704827667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="932" y="60" width="948" height="918" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616554013846" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/utilities/constants.dart</url>
-          <line>5</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="932" y="60" width="948" height="918" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616704827667" />
+    <state x="372" y="244" key="run.anything.popup" timestamp="1616704866525">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="372" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616704866525" />
   </component>
 </project>
