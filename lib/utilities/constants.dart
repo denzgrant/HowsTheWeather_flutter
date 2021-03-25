@@ -25,7 +25,7 @@ const kMessageTextStyle = TextStyle(
   fontWeight: FontWeight.w900,
   shadows: <Shadow>[
     Shadow(
-      offset: Offset(20.0, 20.0),
+      offset: Offset(7.0, 7.0),
       blurRadius: 8.0,
       color: Color.fromARGB(255, 0, 0, 0),
     ),
