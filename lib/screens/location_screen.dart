@@ -82,154 +82,158 @@ class _LocationScreenState extends State<LocationScreen> {
         ),
         constraints: BoxConstraints.expand(),
         child: SafeArea(
-          child: Column(
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: ListView(
+            children: [
+              Column(
                 children: <Widget>[
-                  FlatButton(
-                    onPressed: () async {
-                      var weatherData = await weather.getLocationWeather();
-                      updateUI(weatherData);
-                    },
-                    child: Icon(
-                      Icons.near_me,
-                      size: 40.0,
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      FlatButton(
+                        onPressed: () async {
+                          var weatherData = await weather.getLocationWeather();
+                          updateUI(weatherData);
+                        },
+                        child: Icon(
+                          Icons.near_me,
+                          size: 40.0,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CurrentDate(),
+                      ),
+                      FlatButton(
+                        onPressed: () async {
+                          var typedName = await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return CityScreen(); //passing to location_screen.dart
+                              },
+                            ),
+                          );
+                          if (typedName != null) {
+                            var weatherData =
+                                await weather.getCityWeather(typedName);
+                            updateUI(weatherData);
+                          }
+                        },
+                        child: Icon(
+                          Icons.location_city,
+                          size: 40.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 70,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: CurrentDate(),
-                  ),
-                  FlatButton(
-                    onPressed: () async {
-                      var typedName = await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return CityScreen(); //passing to location_screen.dart
-                          },
+                    child: Row(
+                      children: [
+                        Text(
+                          '$temperature°',
+                          style: kTempIconStyle,
                         ),
-                      );
-                      if (typedName != null) {
-                        var weatherData =
-                            await weather.getCityWeather(typedName);
-                        updateUI(weatherData);
-                      }
-                    },
-                    child: Icon(
-                      Icons.location_city,
-                      size: 40.0,
+                        Text(
+                          weatherIcon,
+                          style: kConditionTextStyle,
+                        ),
+                        SizedBox(
+                          width: 35,
+                        ),
+                        ClockWidget(),
+                      ],
                     ),
                   ),
-                ],
-              ),
-              SizedBox(
-                height: 70,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Text(
-                      '$temperature°',
-                      style: kTempIconStyle,
-                    ),
-                    Text(
-                      weatherIcon,
-                      style: kConditionTextStyle,
-                    ),
-                    SizedBox(
-                      width: 35,
-                    ),
-                    ClockWidget(),
-                  ],
-                ),
-              ),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 13.0),
-                    child: SizedBox(
-                        height: 30,
-                        child: Text.rich(
-                          TextSpan(
-                            text: 'Feels like ',
-                            style: kOtherTemps, // default text style
-                            children: <TextSpan>[
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 13.0),
+                        child: SizedBox(
+                            height: 30,
+                            child: Text.rich(
                               TextSpan(
-                                  text: '$feelsLikeTemp°',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.w900)),
-                            ],
-                          ),
-                        )),
+                                text: 'Feels like ',
+                                style: kOtherTemps, // default text style
+                                children: <TextSpan>[
+                                  TextSpan(
+                                      text: '$feelsLikeTemp°',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w900)),
+                                ],
+                              ),
+                            )),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 13.0),
-                    child: SizedBox(
-                        height: 30,
-                        child: Text.rich(
-                          TextSpan(
-                            text: 'Min: ',
-                            style: kOtherTemps, // default text style
-                            children: <TextSpan>[
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 13.0),
+                        child: SizedBox(
+                            height: 30,
+                            child: Text.rich(
                               TextSpan(
-                                  text: '$tempMin°',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                            ],
-                          ),
-                        )),
+                                text: 'Min: ',
+                                style: kOtherTemps, // default text style
+                                children: <TextSpan>[
+                                  TextSpan(
+                                      text: '$tempMin°',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                            )),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 13.0),
-                    child: SizedBox(
-                        height: 30,
-                        child: Text.rich(
-                          TextSpan(
-                            text: 'Max: ',
-                            style: kOtherTemps, // default text style
-                            children: <TextSpan>[
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 13.0),
+                        child: SizedBox(
+                            height: 30,
+                            child: Text.rich(
                               TextSpan(
-                                  text: '$tempMax°',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                            ],
-                          ),
-                        )),
+                                text: 'Max: ',
+                                style: kOtherTemps, // default text style
+                                children: <TextSpan>[
+                                  TextSpan(
+                                      text: '$tempMax°',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                            )),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 35.0),
-                child: Row(
-                  children: [
-                    Text(
-                      "$weatherDescrip",
-                      style: kMessageTextStyle,
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 35.0),
+                    child: Row(
+                      children: [
+                        Text(
+                          "$weatherDescrip",
+                          style: kMessageTextStyle,
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Text(
-                "$weatherMessage in $cityName, $country!",
-                textAlign: TextAlign.center,
-                style: kMessageTextStyle,
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  Text(
+                    "$weatherMessage in $cityName, $country!",
+                    textAlign: TextAlign.center,
+                    style: kMessageTextStyle,
+                  ),
+                ],
               ),
             ],
           ),
