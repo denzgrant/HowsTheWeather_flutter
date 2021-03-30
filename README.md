@@ -14,4 +14,7 @@ This application uses the user's location on physical device to display their we
 | `flutter_analog_clock` | [flutter_analog_clock](https://pub.dev/packages/flutter_analog_clock) |
 | `flutter_dotenv` | [flutter_dotenv](https://pub.dev/packages/flutter_dotenv) |
 
+## Demo 
+<img src="/images/demo.gif" alt="Weather Demo">  
+
 
